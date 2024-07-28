@@ -10,12 +10,62 @@ namespace HOTEL.crud_rooms
 {
     internal class rooms
     {
-
+        
     }
-   
+    
+    class Run
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Xush kelibsiz");
+
+            CRUD room = new CRUD();
+            int tanlov;
+        metka:
+            Console.WriteLine("---------------------------------------------------");
+            Console.WriteLine("1-Yangi xona qo'shish\n2-Xonani o'chirish\n3-Xona malumotlarini taxrirlash\n4-Xonalarni ko'rish");
+            Console.WriteLine("---------------------------------------------------");
+            Console.Write("Tanlovdan birini tanlang : ");
+
+            tanlov = int.Parse(Console.ReadLine());
+            switch (tanlov)
+            {
+                case 1:
+                    room.CreateRoom();
+                    break;
+                case 2:
+                    room.DeleteRoom();
+                    break;
+                case 3:
+                    room.UpdateRoom();
+                    break;
+                case 4:
+                    room.Info();
+                    break;
+                default:
+                    Console.WriteLine("Noto'g'ri tanlov!");
+                    break;
+            }
+
+            Console.WriteLine("1-Davom etaman\n2-Dasturni yakunlayman");
+            Console.WriteLine("--------------------------------------------------");
+            Console.Write("Tanlovni kiriting : ");
+            tanlov = int.Parse(Console.ReadLine());
+            switch (tanlov)
+            {
+                case 1:
+                    goto metka;
+                case 2:
+                    return;
+                default:
+                    Console.WriteLine("Noto'g'ri tanlov!");
+                    goto metka;
+            }
+        }
+    }
 
 
-class CRUD
+    class CRUD
     {
         string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["RoomManagementDB"].ConnectionString;
 
