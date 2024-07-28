@@ -8,5 +8,6 @@ namespace HOTEL.crud_rooms
 {
     internal class rooms
     {
+        
     }
 }
