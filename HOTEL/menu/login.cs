@@ -32,14 +32,14 @@ namespace HOTEL.menu
                 case 3: Environment.Exit(0);   ; break;                
             }
         }
-        private void tk()//log-in
+        public void tk()//log-in
         {
             Clear();
             Write("_-= Tizimga kirish uchun =-_\n");
             Write(" Login : ");username_login = ReadLine()!;
             Write(" Passwd : ");password_login = ReadLine()!;
             b = true;
-            auth.purpose2(username_login, password_login, b);
+            auth.purpose2(username_login, password_login);
         }
         private void ro()//sign-in
         {
