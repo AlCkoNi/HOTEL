@@ -67,6 +67,8 @@ namespace HOTEL.authentication
                     {
                         Clear();
                         WriteLine("Invalid login or password");
+                        login login = new login();
+                        login.tk();
                     }
                 }
             }
