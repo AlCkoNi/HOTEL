@@ -15,7 +15,6 @@ namespace HOTEL.authentication
         admin_menu admin_Menu = new admin_menu();
         employ_menu employ_Menu = new employ_menu();
         user_menu user_Menu = new user_menu();
-        login login1 = new login();
         private string login = "";
         private string passw = "";
         private int id;
@@ -68,7 +67,6 @@ namespace HOTEL.authentication
                     {
                         Clear();
                         WriteLine("Invalid login or password");
-                        login1.tk();
                         
                     }
                 }
