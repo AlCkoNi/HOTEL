@@ -11,7 +11,7 @@ namespace HOTEL.menu
     public class login
     {
         auth auth = new auth();
-        public string username_login = ""; // NAme
+        private string username_login = ""; // NAme
         public string password_login = ""; //PAsswd
         public string role_login = ""; //KAsbi
         public bool b = false;

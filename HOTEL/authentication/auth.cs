@@ -57,17 +57,13 @@ namespace HOTEL.authentication
                 {
                     command.Parameters.AddWithValue("@login", login);
                     command.Parameters.AddWithValue("@passwd", passw);
-                    object result = command.ExecuteScalar();
-                    string role = Convert.ToString(result)!;
-                    if (role != null)
+                    string role = (string)(command.ExecuteScalar());
+                    choise(role);
+                    switch (role)
                     {
-                        choise(role);
-                    }
-                    else
-                    {
-                        Clear();
-                        WriteLine("Invalid login or password");
-                        
+                        case "admin": admin_Menu.menu(); break;
+                        case "employ": employ_Menu.menu(); break;
+                        case "user": user_Menu.menu(); break;
                     }
                 }
             }
@@ -79,10 +75,14 @@ namespace HOTEL.authentication
                 Clear();
                 switch (role)
                 {
-                    case "admin":admin_Menu.menu(); WriteLine(role); break;
-                    case "employ":employ_Menu.menu(); WriteLine(role); break;
-                    case "user": user_Menu.menu(); WriteLine(role); break;
+                    case "admin":admin_Menu.menu(); break;
+                    case "employ":employ_Menu.menu(); break;
+                    case "user": user_Menu.menu(); break;
                 }
+            }
+            else
+            {
+                Write($"Empty - {role}");
             }
         }
         private void encrapt(string name, string pass)//shifr

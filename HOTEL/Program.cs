@@ -7,8 +7,8 @@ namespace HOTEL
     {
         static void Main(string[] args)
         {
-            login log = new login();
-            log.kirish();
+            login login = new login();
+            login.kirish();
         }
     }
 }
