@@ -20,7 +20,7 @@ namespace HOTEL.crud_rooms
             Console.WriteLine("---------------------------------------------------");
             Console.WriteLine("1-Yangi xona qo'shish\n2-Xonani o'chirish\n3-Xona malumotlarini taxrirlash\n4-Xonalarni ko'rish");
             Console.WriteLine("---------------------------------------------------");
-            Console.Write("Tanlovdan birini tanlang :  ");
+            Console.Write("Tanlovdan birini tanlang :   ");
 
             tanlov = int.Parse(Console.ReadLine());
             switch (tanlov)
