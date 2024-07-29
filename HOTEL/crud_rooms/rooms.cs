@@ -10,12 +10,7 @@ namespace HOTEL.crud_rooms
 {
     internal class rooms
     {
-        
-    }
-    
-    class Run
-    {
-        public static void Main(string[] args)
+        public void run()
         {
             Console.WriteLine("Xush kelibsiz");
 
@@ -63,8 +58,7 @@ namespace HOTEL.crud_rooms
             }
         }
     }
-
-
+    
     class CRUD
     {
         string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["RoomManagementDB"].ConnectionString;

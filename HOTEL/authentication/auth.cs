@@ -15,10 +15,11 @@ namespace HOTEL.authentication
         admin_menu admin_Menu = new admin_menu();
         employ_menu employ_Menu = new employ_menu();
         user_menu user_Menu = new user_menu();
+        login login1 = new login();
         private string login = "";
         private string passw = "";
         private int id;
-        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Windows 11\source\repos\HOTEL\HOTEL\Data_Set.mdf"";Integrated Security=True";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Tolib\Documents\Studio Projact\HOTEL\HOTEL\Data_Set.mdf"";Integrated Security=True";
         public void purpose(string name, string pass, string role, bool b)//sign-in
         {
             encrapt(name, pass);
@@ -67,8 +68,8 @@ namespace HOTEL.authentication
                     {
                         Clear();
                         WriteLine("Invalid login or password");
-                        login login = new login();
-                        login.tk();
+                        login1.tk();
+                        
                     }
                 }
             }
